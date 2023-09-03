@@ -120,25 +120,27 @@ export default function General() {
                         </Box>
                     </Paper>
                 )}
-                <Paper elevation={3}>
-                <Box p={2}>
+
                     {posts.map((post) => (
-                    <div key={post?.id}>                        
-                        <Link href={`/author/${post.author_id}`}>
-                            <Typography variant="body2" 
-                                sx={{
-                                    textAlign: userId === post.author_id ? 'right' : 'left',
-                                    fontSize: '0.6rem'
-                                }}>
-                                {post?.profiles?.firstname} {post?.profiles?.lastname}
-                            </Typography>
-                        </Link>
-                        <Typography variant="body1">{post?.content}</Typography>
-                        <hr />
-                    </div>
+                        <Paper key={post?.id} elevation={3} sx={{mb: '20px'}}>
+                            <Box p={2}>
+                                <div key={post?.id}>                        
+                                    <Link href={`/author/${post.author_id}`}>
+                                        <Typography variant="body2" 
+                                            sx={{
+                                                textAlign: userId === post.author_id ? 'right' : 'left',
+                                                fontSize: '0.6rem'
+                                            }}>
+                                            {post?.profiles?.firstname} {post?.profiles?.lastname}
+                                        </Typography>
+                                    </Link>
+                                    <Typography variant="body1">{post?.content}</Typography>
+                                    <hr />
+                                </div>
+                            </Box>
+                        </Paper>
                     ))}
-                </Box>
-                </Paper>
+
             </Container>
         </>
     )

@@ -136,11 +136,11 @@ export default function AuthorFeed(){
         <Head>
                 <title>Biluha</title>
         </Head>
-        <Button variant="contained" color="success" sx={{left: '5%', position: 'absolute', width: '10%', cursor: 'pointer'}}>
-            <Link href={`/general`} style={{textDecoration: 'none',color: 'white',}}>
-             Back
-             </Link>
-        </Button>
+        <Link href={`/general`} style={{textDecoration: 'none',color: 'white',}}>
+            <Button variant="contained" color="success" sx={{left: '5%', position: 'absolute', width: '10%', cursor: 'pointer'}}>
+                Back
+            </Button>
+        </Link>
         <Button variant="contained" color="error" sx={{right: '5%', position: 'absolute', width: '10%', cursor: 'pointer'}} onClick={handleLogout}>
              Logout
         </Button>
